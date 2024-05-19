@@ -500,7 +500,7 @@ def scaling_features(X_train_split, X_val, X_test, ordinal_features, numeric_fea
     X_val_cat_encoded = encoder.transform(X_val[categorical_features])
     X_test_cat_encoded = encoder.transform(X_test[categorical_features])
 
-    # Concatenate encoded categorical features with binary features
+    # concatenate encoded categorical
     X_train_encoded = np.concatenate([X_train_cat_encoded, X_train_split[binary_features]], axis=1)
     X_val_encoded = np.concatenate([X_val_cat_encoded, X_val[binary_features]], axis=1)
     X_test_encoded = np.concatenate([X_test_cat_encoded, X_test[binary_features]], axis=1)
